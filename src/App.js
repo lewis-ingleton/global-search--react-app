@@ -4,6 +4,9 @@ import './index.css'
 // COMPONENTS
 import Footer from "./components/footer/Footer";
 
+
+import NewsList from './components/News-Api/NewsList';
+
 function App() {
   return (
     <>
@@ -12,6 +15,8 @@ function App() {
       <h3>H3: Global Search !</h3>
       <h4>H4: Global Search !</h4>
       <p>p: Global Search !</p>
+
+      <NewsList />
       <Footer />
     </>
   );
