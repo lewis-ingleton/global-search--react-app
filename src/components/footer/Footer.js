@@ -1,10 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
 
 // CSS 
 import './Footer.css'
 
 
 function Footer() {
+    
     return (
         <>
             <footer>
