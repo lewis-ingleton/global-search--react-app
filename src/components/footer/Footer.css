@@ -13,7 +13,7 @@ footer {
 /* a tag styling */
 
 a {
-    color: white;
+    color: #9FFFCB;
     text-decoration: none;
   }
 
@@ -22,5 +22,5 @@ a {
   }
 
   footer>p {
-    color: white;
+    color: #9FFFCB;
   }
