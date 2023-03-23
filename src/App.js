@@ -22,7 +22,10 @@ function App() {
       <h3>H3: Global Search !</h3>
       <h4>H4: Global Search !</h4>
       <p>p: Global Search !</p>
-      <ResponsiveLayout onSearch={handleSearch} />
+      <ResponsiveLayout
+        onSearch={handleSearch}
+        searchedCountry={searchedCountry}
+      />
       <Footer />
     </>
   );

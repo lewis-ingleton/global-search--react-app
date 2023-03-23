@@ -9,6 +9,7 @@ import "./Responsive.css";
 
 // Components
 import SearchBar from "../searchbar/SearchBar";
+import Map from "../map/Map";
 
 const Item = styled(Paper)(({ theme }) => ({
   backgroundColor: theme.palette.mode === "dark" ? "#1A2027" : "#fff",
@@ -18,7 +19,7 @@ const Item = styled(Paper)(({ theme }) => ({
   color: theme.palette.text.secondary,
 }));
 
-export default function ResponsiveLayout({ onSearch }) {
+export default function ResponsiveLayout({ onSearch, searchedCountry }) {
   const theme = useTheme();
   const mediaSM = useMediaQuery(theme.breakpoints.down("sm"));
 
@@ -39,7 +40,9 @@ export default function ResponsiveLayout({ onSearch }) {
               <Item>Country flag</Item>
             </Box>
             <Box gridColumn="span 12">
-              <Item>Map</Item>
+              <Item>
+                <Map country={searchedCountry} />
+              </Item>
             </Box>
             <Box gridColumn="span 12">
               <Item>Local news</Item>
@@ -61,7 +64,9 @@ export default function ResponsiveLayout({ onSearch }) {
               <Item>Country flag</Item>
             </Box>
             <Box gridColumn="span 6">
-              <Item>Map</Item>
+              <Item>
+                <Map country={searchedCountry} />
+              </Item>
             </Box>
             <Box gridColumn="span 12">
               <Item className="item">Local news</Item>
