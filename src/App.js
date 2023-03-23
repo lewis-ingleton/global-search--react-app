@@ -4,7 +4,6 @@ import "./index.css";
 // COMPONENTS
 import Footer from "./components/footer/Footer";
 import ResponsiveLayout from "./components/responsive-layout/Responsive";
-import SearchBar from "./components/searchbar/SearchBar";
 
 import React, { useState } from "react";
 
