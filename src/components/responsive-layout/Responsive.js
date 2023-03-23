@@ -19,9 +19,11 @@ const Item = styled(Paper)(({ theme }) => ({
   color: theme.palette.text.secondary,
 }));
 
+
 export default function ResponsiveLayout({ onSearch, searchedCountry }) {
   const theme = useTheme();
   const mediaSM = useMediaQuery(theme.breakpoints.down("sm"));
+
 
   return (
     <>
