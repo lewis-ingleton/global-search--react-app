@@ -5,7 +5,6 @@ import "./index.css";
 import Footer from "./components/footer/Footer";
 
 import ResponsiveLayout from "./components/responsive-layout/Responsive";
-import SearchBar from "./components/searchbar/SearchBar";
 
 import React, { useState } from "react";
 
@@ -24,8 +23,10 @@ function App() {
       <h3>H3: Global Search !</h3>
       <h4>H4: Global Search !</h4>
       <p>p: Global Search !</p>
-      <SearchBar />
-      <ResponsiveLayout />
+      <ResponsiveLayout
+        onSearch={handleSearch}
+        searchedCountry={searchedCountry}
+      />
       <Footer />
     </>
   );
