@@ -3,7 +3,7 @@ import React from "react";
 import LanguageIcon from '@mui/icons-material/Language';
 
 // CSS.....
-import './Header.css'
+import './header.css'
 
 // components 
 
