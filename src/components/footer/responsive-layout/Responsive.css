@@ -1,4 +1,10 @@
-.wrapper {
+.largeWrapper {
     max-width: 1300px;
+    margin: auto;
+}
+
+
+.smallWrapper {
+    max-width: 500px;
     margin: auto;
 }

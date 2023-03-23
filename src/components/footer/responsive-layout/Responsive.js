@@ -23,7 +23,7 @@ export default function ResponsiveLayout() {
         <>
             {
                 mediaSM ? (
-                    <Box sx={{ width: 0.9 }} className="wrapper">
+                    <Box sx={{ width: 0.9 }} className="smallWrapper">
                         <Box display="grid" gridTemplateColumns="repeat(12, 1fr)" gap={2}>
                             <Box gridColumn="span 12">
                                 <Item>Search bar</Item>
@@ -46,7 +46,7 @@ export default function ResponsiveLayout() {
 
                 ) : (
 
-                    <Box sx={{ width: 0.9 }} className="wrapper">
+                    <Box sx={{ width: 0.9 }} className="largeWrapper">
                         <Box display="grid" gridTemplateColumns="repeat(12, 1fr)" gap={2}>
                             <Box gridColumn="span 12">
                                 <Item>Search bar</Item>
@@ -61,7 +61,7 @@ export default function ResponsiveLayout() {
                                 <Item>Map</Item>
                             </Box>
                             <Box gridColumn="span 12">
-                                <Item>Local news</Item>
+                                <Item className='item'>Local news</Item>
                             </Box>
                         </Box>
                     </Box>
