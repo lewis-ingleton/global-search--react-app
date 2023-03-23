@@ -3,7 +3,7 @@ import "./index.css";
 
 // COMPONENTS
 import Footer from "./components/footer/Footer";
-import Header from './components/header/Header';
+import Header from "./components/header/Header";
 import ResponsiveLayout from "./components/responsive-layout/Responsive";
 
 import React, { useState } from "react";
@@ -18,7 +18,7 @@ function App() {
   return (
     <>
       <Header />
-      
+
       <ResponsiveLayout
         onSearch={handleSearch}
         searchedCountry={searchedCountry}
