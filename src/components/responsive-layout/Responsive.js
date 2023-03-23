@@ -26,7 +26,7 @@ export default function ResponsiveLayout() {
                     <Box sx={{ width: 0.9 }} className="smallWrapper">
                         <Box display="grid" gridTemplateColumns="repeat(12, 1fr)" gap={2}>
                             <Box gridColumn="span 12">
-                                <Item>Search bar</Item>
+                                <Item>Search bar.</Item>
                             </Box>
                             <Box gridColumn="span 12">
                                 <Item>Country name</Item>
