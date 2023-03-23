@@ -23,7 +23,7 @@ export default function ResponsiveLayout() {
         <>
             {
                 mediaSM ? (
-                    <Box sx={{ width: 0.8 }} className="wrapper">
+                    <Box sx={{ width: 0.9 }} className="wrapper">
                         <Box display="grid" gridTemplateColumns="repeat(12, 1fr)" gap={2}>
                             <Box gridColumn="span 12">
                                 <Item>Search bar</Item>
@@ -46,7 +46,7 @@ export default function ResponsiveLayout() {
 
                 ) : (
 
-                    <Box sx={{ width: 0.8 }} className="wrapper">
+                    <Box sx={{ width: 0.9 }} className="wrapper">
                         <Box display="grid" gridTemplateColumns="repeat(12, 1fr)" gap={2}>
                             <Box gridColumn="span 12">
                                 <Item>Search bar</Item>
