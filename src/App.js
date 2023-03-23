@@ -22,8 +22,7 @@ function App() {
       <h3>H3: Global Search !</h3>
       <h4>H4: Global Search !</h4>
       <p>p: Global Search !</p>
-      <SearchBar />
-      <ResponsiveLayout />
+      <ResponsiveLayout onSearch={handleSearch} />
       <Footer />
     </>
   );
