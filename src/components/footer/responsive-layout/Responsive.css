@@ -2,16 +2,3 @@
     max-width: 1300px;
     margin: auto;
 }
-
-.full-width {
-    width: 100%;
-}
-
-.half-width {
-    width: 49.4%;
-}
-
-section {
-    border: 1px solid red;
-    height: 100px;
-}
