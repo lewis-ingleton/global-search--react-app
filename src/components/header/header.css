@@ -1,7 +1,6 @@
 .header {
     background-image: url(./global-search-header_3_1.jpg);
-    height: 300px;
-    padding: 50px;
+    height: 400px;
     margin-bottom: 50px;
     background-size: cover;
     background-position: center;
@@ -11,6 +10,7 @@
     justify-content: center;
     flex-direction: column;
     flex-wrap: wrap;
+    position: relative;
 }
 
 .headerWrapper {
@@ -22,10 +22,24 @@
     padding: 10px;
     display: flex;
     flex-direction: column;
+    padding: 20px 40px 10;
 }
 
 .headerIcon {
-    color: #9FFFCB;
+    color: white;
+    background-color: #9FFFCB;
+    border-radius: 30px;
+    padding: 2px;
+}
+
+.iconWrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 7px;
+    padding-left: 7px;
+    background-image: linear-gradient(to right, rgba(37, 161, 142, 1), rgba(37, 161, 142, 0)) ;
+    border-radius: 5px 0px 0px 5px;
 }
 
 input {
