@@ -1,16 +1,29 @@
-// CSS 
-import './index.css'
+// CSS
+import "./index.css";
 
 // COMPONENTS
 import Footer from "./components/footer/Footer";
-import ResponsiveLayout from './components/responsive-layout/Responsive';
 import Header from './components/header/Header';
+import ResponsiveLayout from "./components/responsive-layout/Responsive";
+
+import React, { useState } from "react";
 
 function App() {
+  const [searchedCountry, setSearchedCountry] = useState("");
+
+  const handleSearch = (country) => {
+    setSearchedCountry(country);
+  };
+
   return (
     <>
       <Header />
-      <ResponsiveLayout />
+      
+      <ResponsiveLayout
+        onSearch={handleSearch}
+        searchedCountry={searchedCountry}
+      />
+
       <Footer />
     </>
   );
