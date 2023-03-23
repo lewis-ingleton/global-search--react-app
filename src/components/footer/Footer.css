@@ -1,6 +1,5 @@
 footer {
     background-color: #004E64;
-    color: white;
     width: 100%;
     position: absolute;
     bottom: 0;
@@ -14,10 +13,14 @@ footer {
 /* a tag styling */
 
 a {
-    color: white;
+    color: #9FFFCB;
     text-decoration: none;
   }
 
   a:hover {
     text-decoration: underline;
+  }
+
+  footer>p {
+    color: #9FFFCB;
   }
