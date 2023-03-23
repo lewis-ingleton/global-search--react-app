@@ -1,33 +1,40 @@
 import React, { useState } from "react";
-import { Box, TextField, Button } from "@mui/material";
-import styles from "./SearchBar.css";
+import Slider from "@mui/material/Slider";
+import TextField from "@mui/material/TextField";
+import Button from "@mui/material/Button";
 
-const SearchBar = ({ onSearch }) => {
-  const [searchValue, setSearchValue] = useState("");
+const SearchBar = ({ onSearch, onZoomChange, zoomLevel }) => {
+  const [searchInput, setSearchInput] = useState("");
 
-  const handleSearch = () => {
-    onSearch(searchValue);
+  const handleSearchInput = (event) => {
+    setSearchInput(event.target.value);
+  };
+
+  const handleSearchButtonClick = () => {
+    onSearch(searchInput);
+  };
+
+  const handleSliderChange = (event, newValue) => {
+    onZoomChange(newValue);
   };
 
   return (
-    <Box
-      component="form"
-      className={styles.searchBarForm}
-      onSubmit={(e) => {
-        e.preventDefault();
-        handleSearch();
-      }}
-    >
+    <div>
       <TextField
         label="Country"
-        variant="outlined"
-        value={searchValue}
-        onChange={(e) => setSearchValue(e.target.value)}
+        value={searchInput}
+        onChange={handleSearchInput}
       />
-      <Button variant="contained" color="primary" type="submit">
+      <Button variant="contained" onClick={handleSearchButtonClick}>
         Search
       </Button>
-    </Box>
+      <Slider
+        value={zoomLevel}
+        min={1}
+        max={20}
+        onChange={handleSliderChange}
+      />
+    </div>
   );
 };
 
