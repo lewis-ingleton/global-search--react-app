@@ -1,5 +1,14 @@
 import React, { useState } from "react";
+
+// CSS
+import "./index.css";
+
+// COMPONENTS
+import Footer from "./components/footer/Footer";
+//import Header from "./components/header/header";
 import ResponsiveLayout from "./components/responsive-layout/Responsive";
+
+//import NewsList from "./components/News-Api/NewsList";
 
 function App() {
   const [searchedCountry, setSearchedCountry] = useState("");
@@ -14,6 +23,7 @@ function App() {
   };
 
   return (
+
     <div className="App">
       <ResponsiveLayout
         onSearch={handleSearch}
@@ -22,6 +32,10 @@ function App() {
         zoomLevel={zoomLevel}
       />
     </div>
+
+
+      <Footer />
+    </>
   );
 }
 

@@ -1,8 +1,7 @@
 footer {
     background-color: #004E64;
     width: 100%;
-    position: absolute;
-    bottom: 0;
+    margin-top: 50px;
     height: 100px;
     display: flex;
     flex-direction: column;
