@@ -10,6 +10,7 @@ import "./Responsive.css";
 // Components
 import SearchBar from "../searchbar/SearchBar";
 import Map from "../map/Map";
+import ZoomSlider from "../zoom-slider/ZoomSlider";
 
 const Item = styled(Paper)(({ theme }) => ({
   backgroundColor: theme.palette.mode === "dark" ? "#1A2027" : "#fff",
@@ -51,6 +52,7 @@ export default function ResponsiveLayout({
             <Box gridColumn="span 12">
               <Item>
                 <Map country={searchedCountry} zoomLevel={zoomLevel} />
+                <ZoomSlider onZoomChange={onZoomChange} />
               </Item>
             </Box>
             <Box gridColumn="span 12">
@@ -79,6 +81,7 @@ export default function ResponsiveLayout({
             <Box gridColumn="span 6">
               <Item>
                 <Map country={searchedCountry} zoomLevel={zoomLevel} />
+                <ZoomSlider onZoomChange={onZoomChange} />
               </Item>
             </Box>
             <Box gridColumn="span 12">

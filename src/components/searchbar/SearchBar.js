@@ -1,40 +1,30 @@
 import React, { useState } from "react";
-import Slider from "@mui/material/Slider";
 import TextField from "@mui/material/TextField";
 import Button from "@mui/material/Button";
+import Grid from "@mui/material/Grid";
 
-const SearchBar = ({ onSearch, onZoomChange, zoomLevel }) => {
-  const [searchInput, setSearchInput] = useState("");
+const SearchBar = ({ onSearch }) => {
+  const [searchText, setSearchText] = useState("");
 
-  const handleSearchInput = (event) => {
-    setSearchInput(event.target.value);
-  };
-
-  const handleSearchButtonClick = () => {
-    onSearch(searchInput);
-  };
-
-  const handleSliderChange = (event, newValue) => {
-    onZoomChange(newValue);
+  const handleSearchClick = () => {
+    onSearch(searchText);
   };
 
   return (
-    <div>
-      <TextField
-        label="Country"
-        value={searchInput}
-        onChange={handleSearchInput}
-      />
-      <Button variant="contained" onClick={handleSearchButtonClick}>
-        Search
-      </Button>
-      <Slider
-        value={zoomLevel}
-        min={1}
-        max={20}
-        onChange={handleSliderChange}
-      />
-    </div>
+    <Grid container spacing={2} alignItems="center">
+      <Grid item>
+        <TextField
+          label="Country"
+          value={searchText}
+          onChange={(e) => setSearchText(e.target.value)}
+        />
+      </Grid>
+      <Grid item>
+        <Button variant="contained" onClick={handleSearchClick}>
+          Search
+        </Button>
+      </Grid>
+    </Grid>
   );
 };
 
