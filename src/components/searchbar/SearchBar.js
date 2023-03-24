@@ -1,33 +1,30 @@
 import React, { useState } from "react";
-import { Box, TextField, Button } from "@mui/material";
-import styles from "./SearchBar.css";
+import TextField from "@mui/material/TextField";
+import Button from "@mui/material/Button";
+import Grid from "@mui/material/Grid";
 
 const SearchBar = ({ onSearch }) => {
-  const [searchValue, setSearchValue] = useState("");
+  const [searchText, setSearchText] = useState("");
 
-  const handleSearch = () => {
-    onSearch(searchValue);
+  const handleSearchClick = () => {
+    onSearch(searchText);
   };
 
   return (
-    <Box
-      component="form"
-      className={styles.searchBarForm}
-      onSubmit={(e) => {
-        e.preventDefault();
-        handleSearch();
-      }}
-    >
-      <TextField
-        label="Country"
-        variant="outlined"
-        value={searchValue}
-        onChange={(e) => setSearchValue(e.target.value)}
-      />
-      <Button variant="contained" color="primary" type="submit">
-        Search
-      </Button>
-    </Box>
+    <Grid container spacing={2} alignItems="center">
+      <Grid item>
+        <TextField
+          label="Country"
+          value={searchText}
+          onChange={(e) => setSearchText(e.target.value)}
+        />
+      </Grid>
+      <Grid item>
+        <Button variant="contained" onClick={handleSearchClick}>
+          Search
+        </Button>
+      </Grid>
+    </Grid>
   );
 };
 

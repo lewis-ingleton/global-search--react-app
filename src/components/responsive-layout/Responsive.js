@@ -10,7 +10,11 @@ import "./Responsive.css";
 // Components
 import SearchBar from "../searchbar/SearchBar";
 import Map from "../map/Map";
+
+import ZoomSlider from "../zoom-slider/ZoomSlider";
+
 //import NewsList from "../news-api/NewsList";
+
 
 const Item = styled(Paper)(({ theme }) => ({
   backgroundColor: theme.palette.mode === "dark" ? "#1A2027" : "#fff",
@@ -20,11 +24,14 @@ const Item = styled(Paper)(({ theme }) => ({
   color: theme.palette.text.secondary,
 }));
 
-
-export default function ResponsiveLayout({ onSearch, searchedCountry }) {
+export default function ResponsiveLayout({
+  onSearch,
+  searchedCountry,
+  onZoomChange,
+  zoomLevel,
+}) {
   const theme = useTheme();
   const mediaSM = useMediaQuery(theme.breakpoints.down("sm"));
-
 
   return (
     <>
@@ -33,7 +40,11 @@ export default function ResponsiveLayout({ onSearch, searchedCountry }) {
           <Box display="grid" gridTemplateColumns="repeat(12, 1fr)" gap={2}>
             <Box gridColumn="span 12">
               <Item>
-                <SearchBar onSearch={onSearch} />
+                <SearchBar
+                  onSearch={onSearch}
+                  onZoomChange={onZoomChange}
+                  zoomLevel={zoomLevel}
+                />
               </Item>
             </Box>
             <Box gridColumn="span 12">
@@ -44,7 +55,8 @@ export default function ResponsiveLayout({ onSearch, searchedCountry }) {
             </Box>
             <Box gridColumn="span 12">
               <Item>
-                <Map country={searchedCountry} />
+                <Map country={searchedCountry} zoomLevel={zoomLevel} />
+                <ZoomSlider onZoomChange={onZoomChange} />
               </Item>
             </Box>
             <Box gridColumn="span 12">
@@ -57,7 +69,11 @@ export default function ResponsiveLayout({ onSearch, searchedCountry }) {
           <Box display="grid" gridTemplateColumns="repeat(12, 1fr)" gap={2}>
             <Box gridColumn="span 12">
               <Item>
-                <SearchBar onSearch={onSearch} />
+                <SearchBar
+                  onSearch={onSearch}
+                  onZoomChange={onZoomChange}
+                  zoomLevel={zoomLevel}
+                />
               </Item>
             </Box>
             <Box gridColumn="span 12">
@@ -68,7 +84,8 @@ export default function ResponsiveLayout({ onSearch, searchedCountry }) {
             </Box>
             <Box gridColumn="span 6">
               <Item>
-                <Map country={searchedCountry} />
+                <Map country={searchedCountry} zoomLevel={zoomLevel} />
+                <ZoomSlider onZoomChange={onZoomChange} />
               </Item>
             </Box>
             <Box gridColumn="span 12">
