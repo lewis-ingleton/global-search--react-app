@@ -48,7 +48,7 @@ export default function ResponsiveLayout({ onSearch, searchedCountry }) {
               </Item>
             </Box>
             <Box gridColumn="span 12">
-              <Item> <NewsList /></Item>
+              <Item></Item>
             </Box>
           </Box>
         </Box>
@@ -72,7 +72,7 @@ export default function ResponsiveLayout({ onSearch, searchedCountry }) {
               </Item>
             </Box>
             <Box gridColumn="span 12">
-              <Item className="item"><NewsList /></Item>
+              <Item className="item"></Item>
             </Box>
           </Box>
         </Box>
