@@ -23,7 +23,6 @@ function App() {
   };
 
   return (
-
     <div className="App">
       <ResponsiveLayout
         onSearch={handleSearch}
@@ -31,11 +30,8 @@ function App() {
         onZoomChange={handleZoomChange}
         zoomLevel={zoomLevel}
       />
-    </div>
-
-
       <Footer />
-    </>
+    </div>
   );
 }
 
