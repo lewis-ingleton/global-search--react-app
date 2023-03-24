@@ -10,6 +10,7 @@ import "./Responsive.css";
 // Components
 import SearchBar from "../searchbar/SearchBar";
 import Map from "../map/Map";
+import NewsList from "../news-api/NewsList";
 
 const Item = styled(Paper)(({ theme }) => ({
   backgroundColor: theme.palette.mode === "dark" ? "#1A2027" : "#fff",
@@ -47,7 +48,7 @@ export default function ResponsiveLayout({ onSearch, searchedCountry }) {
               </Item>
             </Box>
             <Box gridColumn="span 12">
-              <Item>Local news</Item>
+              <Item> <NewsList /></Item>
             </Box>
           </Box>
         </Box>
@@ -71,7 +72,7 @@ export default function ResponsiveLayout({ onSearch, searchedCountry }) {
               </Item>
             </Box>
             <Box gridColumn="span 12">
-              <Item className="item">Local news</Item>
+              <Item className="item"><NewsList /></Item>
             </Box>
           </Box>
         </Box>
