@@ -7,6 +7,7 @@ import Header from "./components/header/header";
 import ResponsiveLayout from "./components/responsive-layout/Responsive";
 
 import React, { useState } from "react";
+import NewsList from "./components/News-Api/NewsList";
 
 function App() {
   const [searchedCountry, setSearchedCountry] = useState("");
@@ -23,6 +24,8 @@ function App() {
         onSearch={handleSearch}
         searchedCountry={searchedCountry}
       />
+
+      <NewsList />
 
       <Footer />
     </>
