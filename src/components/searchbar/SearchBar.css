@@ -1,15 +1,10 @@
-.searchBarForm {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 1rem;
-  margin-bottom: 2rem;
+.textField {
+  background-color: white;
+
 }
 
-.searchBar {
-  max-width: 600px;
-}
 .button {
-  max-width: 600px;
+  background-color: #00A5CF !important;
+  text-transform: none !important;
+  font-size: 1.1rem !important;
 }

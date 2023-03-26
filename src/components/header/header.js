@@ -21,8 +21,9 @@ function Header({
             </div>
             <div className="header">
                 <div className="headerWrapper">
-                    <h1>Global Search</h1>
-                    <p>Welcome to Global Search</p>
+                    <h2>Search the Globe</h2>
+                    <p>**User story** Global Search is the educational tool that gives you breaking news from all countries across the globe, as well as latest key data for all countries.
+                    </p>
                     <SearchBar
                         onSearch={onSearch}
                         onZoomChange={onZoomChange}
