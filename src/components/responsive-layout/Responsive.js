@@ -10,11 +10,8 @@ import "./Responsive.css";
 // Components
 import SearchBar from "../searchbar/SearchBar";
 import Map from "../map/Map";
-import NewsList from "../news-api/NewsList";
-
 import ZoomSlider from "../zoom-slider/ZoomSlider";
-
-//import NewsList from "../news-api/NewsList";
+import NewsApi from "../news-api/NewsApi";
 
 
 const Item = styled(Paper)(({ theme }) => ({
@@ -61,7 +58,7 @@ export default function ResponsiveLayout({
               </Item>
             </Box>
             <Box gridColumn="span 12">
-              <Item><NewsList/></Item>
+              <Item><NewsApi /></Item>
             </Box>
           </Box>
         </Box>
@@ -90,7 +87,7 @@ export default function ResponsiveLayout({
               </Item>
             </Box>
             <Box gridColumn="span 12">
-              <Item className="item"><NewsList/></Item>
+              <Item className="item"> <NewsApi /></Item>
             </Box>
           </Box>
         </Box>
