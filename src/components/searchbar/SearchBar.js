@@ -11,25 +11,20 @@ const SearchBar = ({ onSearch }) => {
   };
 
   return (
-    <Box
-      component="form"
-      className={styles.searchBarForm}
-      onSubmit={(e) => {
-        e.preventDefault();
-        handleSearch();
-      }}
-    >
-      <TextField
-        label="Country"
-        variant="outlined"
-        value={searchValue}
-        onChange={(e) => setSearchValue(e.target.value)}
-        className="searchBar"
-      />
-      <Button variant="contained" type="submit" className="button">
-        Search
-      </Button>
-    </Box>
+    <Grid container spacing={2} alignItems="center">
+      <Grid item>
+        <TextField
+          label="Country"
+          value={searchText}
+          onChange={(e) => setSearchText(e.target.value)}
+        />
+      </Grid>
+      <Grid item>
+        <Button variant="contained" onClick={handleSearchClick}>
+          Search
+        </Button>
+      </Grid>
+    </Grid>
   );
 };
 

@@ -9,7 +9,10 @@ import './header.css'
 import SearchBar from "../searchbar/SearchBar";
 
 
-function Header() {
+function Header({
+    onSearch,
+    onZoomChange,
+    zoomLevel,}) {
     return (
         <>
             <div className="titleWrapper">
@@ -20,7 +23,11 @@ function Header() {
                 <div className="headerWrapper">
                     <h1>Global Search</h1>
                     <p>Welcome to Global Search</p>
-                    <SearchBar />
+                    <SearchBar
+                        onSearch={onSearch}
+                        onZoomChange={onZoomChange}
+                        zoomLevel={zoomLevel}
+                    />
                 </div>
             </div>
         </>

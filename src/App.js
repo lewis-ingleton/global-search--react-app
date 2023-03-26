@@ -7,9 +7,6 @@ import "./index.css";
 import Footer from "./components/footer/Footer";
 import Header from "./components/header/header";
 import ResponsiveLayout from "./components/responsive-layout/Responsive";
-// import NewsList from "./components/News-Api/NewsList";
-
-
 
 function App() {
   const [searchedCountry, setSearchedCountry] = useState("");
@@ -25,9 +22,10 @@ function App() {
 
   return (
     <div className="App">
-      <Header />
-      <ResponsiveLayout
+      <Header
         onSearch={handleSearch}
+      />
+      <ResponsiveLayout
         searchedCountry={searchedCountry}
         onZoomChange={handleZoomChange}
         zoomLevel={zoomLevel}
