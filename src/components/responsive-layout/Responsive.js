@@ -8,7 +8,6 @@ import { useMediaQuery, useTheme } from "@mui/material";
 import "./Responsive.css";
 
 // Components
-import SearchBar from "../searchbar/SearchBar";
 import Map from "../map/Map";
 import ZoomSlider from "../zoom-slider/ZoomSlider";
 import NewsApi from "../news-api/NewsApi";
