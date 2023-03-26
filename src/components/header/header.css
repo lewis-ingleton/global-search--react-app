@@ -12,6 +12,7 @@
     gap: 7px;
     padding-left: 7px;
     background-image: linear-gradient(to right, #004E64, #00A5CF);
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
 }
 
 .header {
@@ -32,7 +33,7 @@
 .headerWrapper {
     background-color: #9FFFCB;
     width: 70%;
-    max-width: 700px;
+    max-width: 600px;
     margin: auto;
     text-align: center;
     justify-content: center;
@@ -41,7 +42,8 @@
     padding: 2rem 3rem 3rem 3rem;
     display: flex;
     flex-direction: column;
-    gap: 10px
+    gap: 10px;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
 }
 
 .headerWrapper>h2 {
@@ -51,4 +53,8 @@
 .headerWrapper>* {
     width: 100%;
     max-width: 500px;
+}
+
+.headerWrapper>p {
+    text-align: left;
 }
