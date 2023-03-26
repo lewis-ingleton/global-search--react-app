@@ -9,6 +9,7 @@ import './header.css'
 import SearchBar from "../searchbar/SearchBar";
 
 
+
 function Header({
     onSearch,
     onZoomChange,
