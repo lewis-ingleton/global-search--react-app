@@ -58,7 +58,7 @@ export default function ResponsiveLayout({
               </Item>
             </Box>
             <Box gridColumn="span 12">
-              <Item><NewsApi /></Item>
+              <Item><NewsApi country={searchedCountry}/></Item>
             </Box>
           </Box>
         </Box>
@@ -87,7 +87,7 @@ export default function ResponsiveLayout({
               </Item>
             </Box>
             <Box gridColumn="span 12">
-              <Item className="item"> <NewsApi /></Item>
+              <Item className="item"> <NewsApi country={searchedCountry}/></Item>
             </Box>
           </Box>
         </Box>
