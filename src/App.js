@@ -8,7 +8,7 @@ import Footer from "./components/footer/Footer";
 //import Header from "./components/header/header";
 import ResponsiveLayout from "./components/responsive-layout/Responsive";
 
-//import NewsList from "./components/News-Api/NewsList";
+//import NewsList from "./components/news-api/NewsList";
 
 function App() {
   const [searchedCountry, setSearchedCountry] = useState("");
