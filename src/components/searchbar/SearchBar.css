@@ -1,7 +1,15 @@
 .searchBarForm {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   gap: 1rem;
   margin-bottom: 2rem;
+}
+
+.searchBar {
+  max-width: 600px;
+}
+.button {
+  max-width: 600px;
 }

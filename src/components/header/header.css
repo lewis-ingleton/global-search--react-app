@@ -1,6 +1,6 @@
 .header {
     background-image: url(./global-search-header_3_1.jpg);
-    height: 400px;
+    height: 600px;
     margin-bottom: 50px;
     background-size: cover;
     background-position: center;
@@ -16,10 +16,11 @@
 .headerWrapper {
     background-color: #9FFFCB;
     width: 50%;
+    max-width: 1000px;
     margin: auto;
     text-align: center;
     border-radius: 5px;
-    padding: 10px;
+    padding: 2rem 3rem 3rem 3rem;
     display: flex;
     flex-direction: column;
     padding: 20px 40px 10;
@@ -27,19 +28,18 @@
 
 .headerIcon {
     color: white;
-    background-color: #9FFFCB;
+    background-color: #25A18E;
     border-radius: 30px;
     padding: 2px;
 }
 
-.iconWrapper {
+.titleWrapper {
     display: flex;
     flex-direction: row;
     align-items: center;
     gap: 7px;
     padding-left: 7px;
-    background-image: linear-gradient(to right, rgba(37, 161, 142, 1), rgba(37, 161, 142, 0)) ;
-    border-radius: 5px 0px 0px 5px;
+    background-image: linear-gradient(to right, #004E64, #00A5CF) ;
 }
 
 input {
