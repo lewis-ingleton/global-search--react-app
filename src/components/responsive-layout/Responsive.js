@@ -8,7 +8,6 @@ import { useMediaQuery, useTheme } from "@mui/material";
 import "./Responsive.css";
 
 // Components
-import SearchBar from "../searchbar/SearchBar";
 import Map from "../map/Map";
 import ZoomSlider from "../zoom-slider/ZoomSlider";
 import NewsApi from "../news-api/NewsApi";
@@ -23,7 +22,7 @@ const Item = styled(Paper)(({ theme }) => ({
 }));
 
 export default function ResponsiveLayout({
-  onSearch,
+  
   searchedCountry,
   onZoomChange,
   zoomLevel,
@@ -36,15 +35,6 @@ export default function ResponsiveLayout({
       {mediaSM ? (
         <Box sx={{ width: 0.9 }} className="smallWrapper">
           <Box display="grid" gridTemplateColumns="repeat(12, 1fr)" gap={2}>
-            <Box gridColumn="span 12">
-              <Item>
-                <SearchBar
-                  onSearch={onSearch}
-                  onZoomChange={onZoomChange}
-                  zoomLevel={zoomLevel}
-                />
-              </Item>
-            </Box>
             <Box gridColumn="span 12">
               <Item>Country name</Item>
             </Box>
@@ -65,15 +55,6 @@ export default function ResponsiveLayout({
       ) : (
         <Box sx={{ width: 0.9 }} className="largeWrapper">
           <Box display="grid" gridTemplateColumns="repeat(12, 1fr)" gap={2}>
-            <Box gridColumn="span 12">
-              <Item>
-                <SearchBar
-                  onSearch={onSearch}
-                  onZoomChange={onZoomChange}
-                  zoomLevel={zoomLevel}
-                />
-              </Item>
-            </Box>
             <Box gridColumn="span 12">
               <Item>Country name</Item>
             </Box>
