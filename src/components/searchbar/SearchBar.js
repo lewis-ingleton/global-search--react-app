@@ -8,6 +8,7 @@ const SearchBar = ({ onSearch }) => {
 
   const handleSearchClick = () => {
     onSearch(searchText);
+    setSearchText(""); //to clear search input after clicking the search button
   };
 
   return (
