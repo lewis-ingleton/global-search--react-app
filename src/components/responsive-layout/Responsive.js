@@ -12,9 +12,9 @@ import SearchBar from "../searchbar/SearchBar";
 import Map from "../map/Map";
 
 import ZoomSlider from "../zoom-slider/ZoomSlider";
+import RenderFlag from "../RenderFlag";
 
 //import NewsList from "../news-api/NewsList";
-
 
 const Item = styled(Paper)(({ theme }) => ({
   backgroundColor: theme.palette.mode === "dark" ? "#1A2027" : "#fff",
@@ -51,7 +51,9 @@ export default function ResponsiveLayout({
               <Item>Country name</Item>
             </Box>
             <Box gridColumn="span 12">
-              <Item>Country flag</Item>
+              <Item>
+                <RenderFlag country={searchedCountry} />
+              </Item>
             </Box>
             <Box gridColumn="span 12">
               <Item>
@@ -80,7 +82,9 @@ export default function ResponsiveLayout({
               <Item>Country name</Item>
             </Box>
             <Box gridColumn="span 6">
-              <Item>Country flag</Item>
+              <Item>
+                <RenderFlag country={searchedCountry} />
+              </Item>
             </Box>
             <Box gridColumn="span 6">
               <Item>
