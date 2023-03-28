@@ -3,7 +3,7 @@ import '../news-api/NewsApi.css'
 import { Grid } from '@mui/material';
 
 // API key
-export const YOUR_API_KEY = 'ae8631cbf48436eab7deeed1a6bd5a54';
+export const YOUR_API_KEY = 'b09d90056f0cc04361f78e5db3d75dc3';
 
 // Function to fetch news based on country
 export const getNews = async (country) => {
