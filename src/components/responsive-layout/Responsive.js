@@ -50,9 +50,6 @@ export default function ResponsiveLayout({
             </Box>
             <Box gridColumn="span 12">
               <Item><NewsApi country={searchedCountry} /></Item>
-              <Item>
-                <NewsApi country={searchedCountry} />
-              </Item>
             </Box>
           </Box>
         </Box>
@@ -76,8 +73,6 @@ export default function ResponsiveLayout({
             <Box gridColumn="span 12">
               <Item className="item"> <NewsApi country={searchedCountry} /></Item>
               <Item className="item">
-                {" "}
-                <NewsApi country={searchedCountry} />
               </Item>
             </Box>
           </Box>
