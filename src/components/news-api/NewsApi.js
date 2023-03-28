@@ -2,7 +2,6 @@ import { useEffect, useState } from 'react';
 import '../news-api/NewsApi.css'
 import { Grid } from '@mui/material';
 
-
 // API key
 export const YOUR_API_KEY = 'b09d90056f0cc04361f78e5db3d75dc3';
 
@@ -34,7 +33,6 @@ const NewsApi = ({ country }) => {
         {news && news.length > 0 ? (
           news.map((article) => (
             <Grid item xs={12} sm={6} md={4} key={article.url}>
-              <a href={article.url} style={{ textDecoration: 'none', color: 'inherit' }}></a>
               <div>
                 <img src={article.image} alt={article.title} />
                 <div>
