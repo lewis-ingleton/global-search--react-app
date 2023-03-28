@@ -11,7 +11,11 @@ import ResponsiveLayout from "./components/responsive-layout/Responsive";
 function App() {
   const [searchedCountry, setSearchedCountry] = useState("");
   const [zoomLevel, setZoomLevel] = useState(5);
-  const [visitedCountries, setVisitedCountries] = useState([]);
+
+  const [visitedCountries, setVisitedCountries] = useState(() => {
+    const storedVisitedCountries = localStorage.getItem("visitedCountries");
+    return storedVisitedCountries ? JSON.parse(storedVisitedCountries) : [];
+  });
 
   useEffect(() => {
     const storedVisitedCountries = localStorage.getItem("visitedCountries");
@@ -26,8 +30,14 @@ function App() {
 
   const handleSearch = (country) => {
     setSearchedCountry(country);
-    if (!visitedCountries.includes(country)) {
-      setVisitedCountries([...visitedCountries, country]);
+
+    if (country) {
+      const updatedVisitedCountries = [...visitedCountries, country];
+      setVisitedCountries(updatedVisitedCountries);
+      localStorage.setItem(
+        "visitedCountries",
+        JSON.stringify(updatedVisitedCountries)
+      );
     }
   };
 
