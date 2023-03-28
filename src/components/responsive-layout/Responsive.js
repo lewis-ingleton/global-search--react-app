@@ -43,12 +43,13 @@ export default function ResponsiveLayout({
               <Item>Country flag</Item>
             </Box>
             <Box gridColumn="span 12">
-              <Item>
+              <Item className="map-container">
                 <Map country={searchedCountry} zoomLevel={zoomLevel} />
                 <ZoomSlider onZoomChange={onZoomChange} />
               </Item>
             </Box>
             <Box gridColumn="span 12">
+              <Item><NewsApi country={searchedCountry} /></Item>
               <Item>
                 <NewsApi country={searchedCountry} />
               </Item>
@@ -66,13 +67,14 @@ export default function ResponsiveLayout({
             <Box gridColumn="span 6">
               <Item>Country flag</Item>
             </Box>
-            <Box gridColumn="span 6">
-              <Item>
+            <Box gridColumn="span 6" >
+              <Item className="map-container">
                 <Map country={searchedCountry} zoomLevel={zoomLevel} />
                 <ZoomSlider onZoomChange={onZoomChange} />
               </Item>
             </Box>
             <Box gridColumn="span 12">
+              <Item className="item"> <NewsApi country={searchedCountry} /></Item>
               <Item className="item">
                 {" "}
                 <NewsApi country={searchedCountry} />
