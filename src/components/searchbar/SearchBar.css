@@ -1,7 +1,10 @@
-.searchBarForm {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 1rem;
-  margin-bottom: 2rem;
+.textField {
+  background-color: white;
+
+}
+
+.button {
+  background-color: #00A5CF !important;
+  text-transform: none !important;
+  font-size: 1.1rem !important;
 }

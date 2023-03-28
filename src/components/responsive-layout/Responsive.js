@@ -8,11 +8,10 @@ import { useMediaQuery, useTheme } from "@mui/material";
 import "./Responsive.css";
 
 // Components
-import SearchBar from "../searchbar/SearchBar";
 import Map from "../map/Map";
 import ZoomSlider from "../zoom-slider/ZoomSlider";
 import NewsApi from "../news-api/NewsApi";
-
+import CountryName from "../country-name/CountryName";
 
 const Item = styled(Paper)(({ theme }) => ({
   backgroundColor: theme.palette.mode === "dark" ? "#1A2027" : "#fff",
@@ -23,7 +22,6 @@ const Item = styled(Paper)(({ theme }) => ({
 }));
 
 export default function ResponsiveLayout({
-  onSearch,
   searchedCountry,
   onZoomChange,
   zoomLevel,
@@ -38,15 +36,8 @@ export default function ResponsiveLayout({
           <Box display="grid" gridTemplateColumns="repeat(12, 1fr)" gap={2}>
             <Box gridColumn="span 12">
               <Item>
-                <SearchBar
-                  onSearch={onSearch}
-                  onZoomChange={onZoomChange}
-                  zoomLevel={zoomLevel}
-                />
+                <CountryName country={searchedCountry} />
               </Item>
-            </Box>
-            <Box gridColumn="span 12">
-              <Item>Country name</Item>
             </Box>
             <Box gridColumn="span 12">
               <Item>Country flag</Item>
@@ -58,7 +49,9 @@ export default function ResponsiveLayout({
               </Item>
             </Box>
             <Box gridColumn="span 12">
-              <Item><NewsApi country={searchedCountry}/></Item>
+              <Item>
+                <NewsApi country={searchedCountry} />
+              </Item>
             </Box>
           </Box>
         </Box>
@@ -67,15 +60,8 @@ export default function ResponsiveLayout({
           <Box display="grid" gridTemplateColumns="repeat(12, 1fr)" gap={2}>
             <Box gridColumn="span 12">
               <Item>
-                <SearchBar
-                  onSearch={onSearch}
-                  onZoomChange={onZoomChange}
-                  zoomLevel={zoomLevel}
-                />
+                <CountryName country={searchedCountry} />
               </Item>
-            </Box>
-            <Box gridColumn="span 12">
-              <Item>Country name</Item>
             </Box>
             <Box gridColumn="span 6">
               <Item>Country flag</Item>
@@ -87,7 +73,10 @@ export default function ResponsiveLayout({
               </Item>
             </Box>
             <Box gridColumn="span 12">
-              <Item className="item"> <NewsApi country={searchedCountry}/></Item>
+              <Item className="item">
+                {" "}
+                <NewsApi country={searchedCountry} />
+              </Item>
             </Box>
           </Box>
         </Box>
