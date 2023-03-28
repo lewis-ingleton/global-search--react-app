@@ -28,7 +28,7 @@ const NewsApi = ({ country }) => {
 
   return (
     <div>
-      <h1>Local Headlines</h1>
+      <h2>Local Headlines</h2>
       <Grid container spacing={2}>
         {news && news.length > 0 ? (
           news.map((article) => (
@@ -36,7 +36,7 @@ const NewsApi = ({ country }) => {
               <div>
                 <img src={article.image} alt={article.title} />
                 <div>
-                  <h2>{article.title}</h2>
+                  <h3>{article.title}</h3>
                   <p>{article.description}</p>
                 </div>
               </div>
