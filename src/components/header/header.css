@@ -1,60 +1,62 @@
 .headerIcon {
-    color: white;
-    background-color: #25A18E;
-    border-radius: 30px;
-    padding: 2px;
+  color: white;
+  background-color: #25a18e;
+  border-radius: 30px;
+  padding: 2px;
 }
 
 .titleWrapper {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    gap: 7px;
-    padding-left: 7px;
-    background-image: linear-gradient(to right, #004E64, #00A5CF);
-    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 7px;
+  padding-left: 7px;
+  background-image: linear-gradient(to right, #004e64, #00a5cf);
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px,
+    rgba(0, 0, 0, 0.22) 0px 15px 12px;
 }
 
 .header {
-    background-image: url(./global-search-header_3_1.jpg);
-    height: 600px;
-    margin-bottom: 50px;
-    background-size: cover;
-    background-position: center;
-    max-width: 100%;
-    display: flex;
-    align-items: left;
-    justify-content: center;
-    flex-direction: column;
-    flex-wrap: wrap;
-    position: relative;
+  background-image: url(./global-search-header_3_1.jpg);
+  height: 600px;
+  margin-bottom: 50px;
+  background-size: cover;
+  background-position: center;
+  max-width: 100%;
+  display: flex;
+  align-items: left;
+  justify-content: center;
+  flex-direction: column;
+  flex-wrap: wrap;
+  position: relative;
 }
 
 .headerWrapper {
-    background-color: #9FFFCB;
-    width: 70%;
-    max-width: 600px;
-    margin: auto;
-    text-align: center;
-    justify-content: center;
-    align-items: center;
-    border-radius: 3px;
-    padding: 2rem 3rem 3rem 3rem;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+  background-color: #9fffcb;
+  width: 70%;
+  max-width: 600px;
+  margin: auto;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  border-radius: 3px;
+  padding: 2rem 3rem 3rem 3rem;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px,
+    rgba(0, 0, 0, 0.22) 0px 15px 12px;
 }
 
-.headerWrapper>h2 {
-    margin-bottom: 0px;
+.headerWrapper > h2 {
+  margin-bottom: 0px;
 }
 
-.headerWrapper>* {
-    width: 100%;
-    max-width: 500px;
+.headerWrapper > * {
+  width: 100%;
+  max-width: 500px;
 }
 
-.headerWrapper>p {
-    text-align: left;
+.headerWrapper > p {
+  text-align: left;
 }
