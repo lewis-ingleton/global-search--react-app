@@ -2,7 +2,7 @@ import React from "react";
 import LanguageIcon from "@mui/icons-material/Language";
 
 // CSS
-import "./header.css";
+import './header.css'
 
 // components
 import SearchBar from "../searchbar/SearchBar";
