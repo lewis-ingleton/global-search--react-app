@@ -4,62 +4,31 @@
 
 ## Description:
 
-The app creates a `generatedREADME.md` file, and fills in the sections based on the input given by the user in the terminal with the use of Node.js and the Inquirer package. The file is created with the use of the fs package.
+The app allows the user to search for a Country and get back information about it. This shows on the page in an intuituve UI.
 
 
 
-[**Video Demo**](https://drive.google.com/file/d/17HAMkaHpc1YM4lG3RBAn2tKEkcR5B8If/view?usp=sharing)
+[**Video Demo**]()
 
-https://user-images.githubusercontent.com/93586814/222556373-733bc248-3607-440e-97ff-59baae45cc72.mp4
+Screenshot goes here
 
 ## Table of Contents:
 
-**[Installation](#Installation)**
-**[Usage](#Usage)**
-**[License](#License)**
-**[Questions](#Questions)**
+**[Installation](#Installation)**</br>
+**[Usage](#Usage)**</br>
+**[License](#License)**</br>
+**[Questions](#Questions)**</br>
   
 ## Installation:
 
-1. Install npm:
+Page is deployed on Netlify. Live page at:
 
-```
-npm install -y
-```
-
-2. Install all the required packages
-
-- Inquirer
-
-```
-npm install inquirer
-```
-
-
-In the `packages.json` file add `"type": "module"`
-
-- fs
-
-```
-npm install fs
-```
+[**Live Page**](https://global-search-app.netlify.app/)
 
 
 ## Usage:
 
-In the terminal:
-
-1. Start by running
-
-```
-node assets/index.js
-```
-
-while being in the root folder
-
-2. Type or select the answers to the questions presented by Inquirer
-
-3. Open the `createdREADME` file and view the results
+Type the name of the Country that you wish to search information for:
 
 
 ## License:
@@ -68,6 +37,9 @@ MIT License
 
 ## Questions:
 
-For any questions find me on:
+For any questions find ous on:
 
-- Github: [**@whydidIchoosephysics**](https://github.com/whydidIchoosephysics)
+- Lewis: [**lewis-ingleton**](https://github.com/lewis-ingleton)
+- Saarah: [**khans0**](https://github.com/khans0)
+- Hammed: [**hoduola5**](https://github.com/hoduola5)
+- Stefan: [**whydidIchoosephysics**](https://github.com/whydidIchoosephysics)
