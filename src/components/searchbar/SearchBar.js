@@ -9,7 +9,18 @@ const SearchBar = ({ onSearch }) => {
   const [searchText, setSearchText] = useState("");
 
   const handleSearchClick = () => {
+    checkEmptySearch();
     onSearch(searchText);
+    setSearchText(""); //to clear search input after clicking the search
+  };
+
+  // To validate the search input is not empty
+  const checkEmptySearch = () => {
+    if (searchText !== "") {
+      onSearch(searchText);
+    } else {
+      alert("Please enter a valid country name!");
+    }
   };
 
   return (
