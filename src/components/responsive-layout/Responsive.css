@@ -8,3 +8,11 @@
     max-width: 500px;
     margin: auto;
 }
+
+.map-container {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    justify-content: center;
+    align-items: center;
+}
