@@ -11,7 +11,7 @@ import "./Responsive.css";
 import Map from "../map/Map";
 import ZoomSlider from "../zoom-slider/ZoomSlider";
 import NewsApi from "../news-api/NewsApi";
-
+import CountryName from "../country-name/CountryName";
 
 const Item = styled(Paper)(({ theme }) => ({
   backgroundColor: theme.palette.mode === "dark" ? "#1A2027" : "#fff",
@@ -22,7 +22,6 @@ const Item = styled(Paper)(({ theme }) => ({
 }));
 
 export default function ResponsiveLayout({
-
   searchedCountry,
   onZoomChange,
   zoomLevel,
@@ -36,7 +35,9 @@ export default function ResponsiveLayout({
         <Box sx={{ width: 0.9 }} className="smallWrapper">
           <Box display="grid" gridTemplateColumns="repeat(12, 1fr)" gap={2}>
             <Box gridColumn="span 12">
-              <Item>Country name</Item>
+              <Item>
+                <CountryName country={searchedCountry} />
+              </Item>
             </Box>
             <Box gridColumn="span 12">
               <Item>Country flag</Item>
@@ -49,6 +50,9 @@ export default function ResponsiveLayout({
             </Box>
             <Box gridColumn="span 12">
               <Item><NewsApi country={searchedCountry} /></Item>
+              <Item>
+                <NewsApi country={searchedCountry} />
+              </Item>
             </Box>
           </Box>
         </Box>
@@ -56,7 +60,9 @@ export default function ResponsiveLayout({
         <Box sx={{ width: 0.9 }} className="largeWrapper">
           <Box display="grid" gridTemplateColumns="repeat(12, 1fr)" gap={2}>
             <Box gridColumn="span 12">
-              <Item>Country name</Item>
+              <Item>
+                <CountryName country={searchedCountry} />
+              </Item>
             </Box>
             <Box gridColumn="span 6">
               <Item>Country flag</Item>
@@ -69,6 +75,10 @@ export default function ResponsiveLayout({
             </Box>
             <Box gridColumn="span 12">
               <Item className="item"> <NewsApi country={searchedCountry} /></Item>
+              <Item className="item">
+                {" "}
+                <NewsApi country={searchedCountry} />
+              </Item>
             </Box>
           </Box>
         </Box>
