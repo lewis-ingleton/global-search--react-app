@@ -5,11 +5,16 @@ import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
 import "./VisitedCountries.css";
 
-const VisitedCountries = ({ visitedCountries }) => {
+const VisitedCountries = ({ visitedCountries, onClearVisitedCountries }) => {
   const [open, setOpen] = useState(false);
 
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
+
+  const handleClear = () => {
+    onClearVisitedCountries();
+    handleClose();
+  };
 
   const modalBody = (
     <Box className="visited-countries-modal">
@@ -21,6 +26,9 @@ const VisitedCountries = ({ visitedCountries }) => {
           <li key={index}>{country}</li>
         ))}
       </ul>
+      <Button variant="outlined" onClick={handleClear}>
+        Clear Visited Countries
+      </Button>
     </Box>
   );
 
