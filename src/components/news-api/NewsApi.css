@@ -16,6 +16,7 @@ li {
   border: 1px solid #ddd;
   padding: 10px;
   box-sizing: border-box;
+  text-align: left !important;
 }
 
 li:nth-child(2n) {
@@ -51,6 +52,10 @@ a {
   -webkit-line-clamp: 3; /* Number of lines to show */
   overflow: hidden;
   text-overflow: ellipsis;
+}
+
+.textAlign{
+  text-align: left;
 }
 
 
