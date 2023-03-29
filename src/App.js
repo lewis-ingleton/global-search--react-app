@@ -48,11 +48,11 @@ function App() {
     setZoomLevel(newZoomLevel);
   };
 
-
-
   return (
     <div className="App">
       <Header onSearch={handleSearch} visitedCountries={visitedCountries} />
+     
+     
       {renderContent ? 
       <ResponsiveLayout
         searchedCountry={searchedCountry}
@@ -60,6 +60,9 @@ function App() {
         zoomLevel={zoomLevel}
       /> : <PlaceholderHeader />
       }
+
+
+      
       
       <Footer />
     </div>
