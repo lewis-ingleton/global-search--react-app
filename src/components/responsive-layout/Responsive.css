@@ -7,6 +7,7 @@
 .smallWrapper {
     max-width: 500px;
     margin: auto;
+
 }
 
 .countryName {
@@ -19,4 +20,9 @@
     overflow: hidden;
     justify-content: center;
     align-items: center;
+}
+
+h2,
+h3 {
+    color: #25A18E
 }
