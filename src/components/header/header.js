@@ -14,6 +14,7 @@ function Header({
   zoomLevel,
   visitedCountries,
   setVisitedCountries,
+  onCountryClick, // Add the onCountryClick prop
 }) {
   const handleClearVisitedCountries = () => {
     localStorage.removeItem("visitedCountries");
@@ -31,6 +32,7 @@ function Header({
           <VisitedCountries
             visitedCountries={visitedCountries}
             onClearVisitedCountries={handleClearVisitedCountries}
+            onCountryClick={onCountryClick} // Pass the handleCountryClick function to the VisitedCountries component
           />
         </div>
       </div>
