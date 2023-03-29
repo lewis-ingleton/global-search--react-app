@@ -34,7 +34,20 @@ const VisitedCountries = ({ visitedCountries, onClearVisitedCountries }) => {
 
   return (
     <div>
-      <Button variant="outlined" onClick={handleOpen}>
+      <Button
+        variant="outlined"
+        onClick={handleOpen}
+        sx={{
+          position: "absolute",
+          top: 8,
+          right: 8,
+          backgroundColor: "#25a18e",
+          color: "#fff",
+          "&:hover": {
+            backgroundColor: "#1f8a79",
+          },
+        }}
+      >
         Visited Countries
       </Button>
       <Modal

@@ -14,7 +14,8 @@
   background-image: linear-gradient(to right, #004e64, #00a5cf);
   box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px,
     rgba(0, 0, 0, 0.22) 0px 15px 12px;
-} 
+  position: relative;
+}
 
 .header {
   background-image: url(./global-search-header_3_1.jpg);
@@ -59,4 +60,22 @@
 
 .headerWrapper > p {
   text-align: left;
+}
+
+.visitedCountriesBtn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: #25a18e;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 8px 15px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.visitedCountriesBtn:hover {
+  background-color: #1f8c7a;
 }

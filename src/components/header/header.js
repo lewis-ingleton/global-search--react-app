@@ -27,7 +27,7 @@ function Header({
       <div className="titleWrapper">
         <LanguageIcon className="headerIcon" />
         <h1>Global Search</h1>
-        {/* Removed the first VisitedCountries button */}
+
         <div className="visited-countries-btn">
           <VisitedCountries
             visitedCountries={visitedCountries}
