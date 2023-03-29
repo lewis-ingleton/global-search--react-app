@@ -2,20 +2,37 @@ import React from "react";
 import LanguageIcon from "@mui/icons-material/Language";
 
 // CSS
-import './header.css'
+import "./header.css";
 
 // components
 import SearchBar from "../searchbar/SearchBar";
 import VisitedCountries from "../visited-countries/VisitedCountries";
 
-function Header({ onSearch, onZoomChange, zoomLevel, visitedCountries }) {
+function Header({
+  onSearch,
+  onZoomChange,
+  zoomLevel,
+  visitedCountries,
+  setVisitedCountries,
+}) {
+  // Added setVisitedCountries to the props
+
+  const handleClearVisitedCountries = () => {
+    localStorage.removeItem("visitedCountries");
+    setVisitedCountries([]);
+  };
+
   return (
     <>
       <div className="titleWrapper">
         <LanguageIcon className="headerIcon" />
         <h1>Global Search</h1>
+        {/* Removed the first VisitedCountries button */}
         <div className="visited-countries-btn">
-          <VisitedCountries visitedCountries={visitedCountries} />
+          <VisitedCountries
+            visitedCountries={visitedCountries}
+            onClearVisitedCountries={handleClearVisitedCountries}
+          />
         </div>
       </div>
       <div className="header">
