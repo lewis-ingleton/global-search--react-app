@@ -2,7 +2,7 @@ import React from "react";
 import LanguageIcon from "@mui/icons-material/Language";
 
 // CSS
-import "./header.css";
+import "./Header.css";
 
 // components
 import SearchBar from "../searchbar/SearchBar";
@@ -15,8 +15,6 @@ function Header({
   visitedCountries,
   setVisitedCountries,
 }) {
-  // Added setVisitedCountries to the props
-
   const handleClearVisitedCountries = () => {
     localStorage.removeItem("visitedCountries");
     setVisitedCountries([]);
@@ -25,9 +23,10 @@ function Header({
   return (
     <>
       <div className="titleWrapper">
-        <LanguageIcon className="headerIcon" />
-        <h1>Global Search</h1>
-
+        <div className="title-container">
+          <LanguageIcon className="headerIcon" />
+          <h1>Global Search</h1>
+        </div>
         <div className="visited-countries-btn">
           <VisitedCountries
             visitedCountries={visitedCountries}

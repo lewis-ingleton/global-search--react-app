@@ -1,0 +1,47 @@
+.visited-countries-modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 400px;
+  padding: 2rem;
+  background-color: white;
+  border: 1px solid #ccc;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  outline: none;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.visited-countries-list {
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  justify-content: center;
+}
+
+.country-item {
+  background-color: #f5f5f5;
+  padding: 5px 10px;
+  border-radius: 4px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 5px;
+  position: relative;
+  overflow: hidden;
+}
+
+.country-item span {
+  position: relative;
+  z-index: 1;
+}
+
+.clear-visited-countries-btn {
+  background-color: #f5f5f5;
+  color: #333;
+  align-self: center;
+}

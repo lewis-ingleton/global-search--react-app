@@ -23,10 +23,17 @@ const VisitedCountries = ({ visitedCountries, onClearVisitedCountries }) => {
       </Typography>
       <ul className="visited-countries-list">
         {visitedCountries.map((country, index) => (
-          <li key={index}>{country}</li>
+          <li key={index} className="country-item">
+            <span>{country}</span>
+          </li>
         ))}
       </ul>
-      <Button variant="outlined" onClick={handleClear}>
+
+      <Button
+        variant="outlined"
+        onClick={handleClear}
+        className="clear-visited-countries-btn"
+      >
         Clear Visited Countries
       </Button>
     </Box>
@@ -34,20 +41,7 @@ const VisitedCountries = ({ visitedCountries, onClearVisitedCountries }) => {
 
   return (
     <div>
-      <Button
-        variant="outlined"
-        onClick={handleOpen}
-        sx={{
-          position: "absolute",
-          top: 8,
-          right: 8,
-          backgroundColor: "#25a18e",
-          color: "#fff",
-          "&:hover": {
-            backgroundColor: "#1f8a79",
-          },
-        }}
-      >
+      <Button variant="contained" onClick={handleOpen}>
         Visited Countries
       </Button>
       <Modal
