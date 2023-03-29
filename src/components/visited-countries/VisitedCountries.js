@@ -45,7 +45,6 @@ const VisitedCountries = ({
       </ul>
 
       <Button
-      className="visited-button"
         variant="outlined"
         onClick={handleClear}
         className="clear-visited-countries-btn"

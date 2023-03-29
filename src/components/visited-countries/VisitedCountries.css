@@ -7,11 +7,13 @@
   padding: 2rem;
   background-color: white;
   border: 1px solid #ccc;
+  border-radius: 3px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   outline: none;
   display: flex;
   align-items: center;
   flex-direction: column;
+  flex-wrap: wrap;
   gap: 1rem;
 }
 
@@ -75,5 +77,4 @@
   color: #00a5cf !important;
   text-transform: capitalize !important;
   font-size: 1.1rem !important;
-  width: 100%;
 }
