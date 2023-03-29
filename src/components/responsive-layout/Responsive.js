@@ -35,7 +35,7 @@ export default function ResponsiveLayout({
         <Box sx={{ width: 0.9 }} className="smallWrapper">
           <Box display="grid" gridTemplateColumns="repeat(12, 1fr)" gap={2}>
             <Box gridColumn="span 12">
-              <Item>
+              <Item className="countryName">
                 <CountryName country={searchedCountry} />
               </Item>
             </Box>
@@ -57,7 +57,7 @@ export default function ResponsiveLayout({
         <Box sx={{ width: 0.9 }} className="largeWrapper">
           <Box display="grid" gridTemplateColumns="repeat(12, 1fr)" gap={2}>
             <Box gridColumn="span 12">
-              <Item>
+              <Item className="countryName">
                 <CountryName country={searchedCountry} />
               </Item>
             </Box>

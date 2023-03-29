@@ -9,6 +9,10 @@
     margin: auto;
 }
 
+.countryName {
+    text-transform: capitalize;
+}
+
 .map-container {
     display: flex;
     flex-direction: column;
