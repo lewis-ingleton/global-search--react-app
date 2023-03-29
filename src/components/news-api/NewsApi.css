@@ -45,3 +45,12 @@ a {
   color: #25A18E;
 }
 
+.newsDescription {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3; /* Number of lines to show */
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+
