@@ -28,7 +28,7 @@ const NewsApi = ({ country }) => {
 
   return (
     <div>
-      <h2>Local Headlines</h2>
+      <h2>Local headlines</h2>
       <Grid container spacing={2}>
         {news && news.length > 0 ? (
           news.map((article) => (
