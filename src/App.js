@@ -34,7 +34,7 @@ function App() {
     setSearchedCountry(country);
     setRenderContent(true);
 
-    if (country) {
+    if (country && !visitedCountries.includes(country)) {
       const updatedVisitedCountries = [...visitedCountries, country];
       setVisitedCountries(updatedVisitedCountries);
       localStorage.setItem(

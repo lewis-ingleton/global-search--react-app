@@ -15,8 +15,6 @@ function Header({
   visitedCountries,
   setVisitedCountries,
 }) {
-  // Added setVisitedCountries to the props
-
   const handleClearVisitedCountries = () => {
     localStorage.removeItem("visitedCountries");
     setVisitedCountries([]);
@@ -25,9 +23,10 @@ function Header({
   return (
     <>
       <div className="titleWrapper">
-        <LanguageIcon className="headerIcon" />
-        <h1>Global Search</h1>
-        {/* Removed the first VisitedCountries button */}
+        <div className="title-container">
+          <LanguageIcon className="headerIcon" />
+          <h1>Global Search</h1>
+        </div>
         <div className="visited-countries-btn">
           <VisitedCountries
             visitedCountries={visitedCountries}
