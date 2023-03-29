@@ -27,8 +27,8 @@ const VisitedCountries = ({
 
   const modalBody = (
     <Box className="visited-countries-modal">
-      <Typography variant="h6" component="h2">
-        Visited Countries
+      <Typography variant="h5" component="h2">
+        Visited countries
       </Typography>
       <ul className="visited-countries-list">
         {visitedCountries.map((country, index) => (
