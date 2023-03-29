@@ -44,6 +44,11 @@ function App() {
     }
   };
 
+  const handleCountryClick = (countryName) => {
+    setSearchedCountry(countryName);
+    setRenderContent(true);
+  }
+
   const handleZoomChange = (newZoomLevel) => {
     setZoomLevel(newZoomLevel);
   };
@@ -52,8 +57,11 @@ function App() {
     <div className="App">
       <Header
         onSearch={handleSearch}
+        onZoomChange={handleZoomChange}
+        zoomLevel={zoomLevel}
         visitedCountries={visitedCountries}
         setVisitedCountries={setVisitedCountries}
+        onCountryClick={handleCountryClick} // Pass the handleCountryClick function to the Header component
       />
 
       {renderContent ? (

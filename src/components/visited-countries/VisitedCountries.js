@@ -5,7 +5,11 @@ import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
 import "./VisitedCountries.css";
 
-const VisitedCountries = ({ visitedCountries, onClearVisitedCountries }) => {
+const VisitedCountries = ({
+  visitedCountries,
+  onClearVisitedCountries,
+  onCountryClick,
+}) => {
   const [open, setOpen] = useState(false);
 
   const handleOpen = () => setOpen(true);
@@ -13,6 +17,11 @@ const VisitedCountries = ({ visitedCountries, onClearVisitedCountries }) => {
 
   const handleClear = () => {
     onClearVisitedCountries();
+    handleClose();
+  };
+
+  const handleCountryItemClick = (country) => {
+    onCountryClick(country); // Call the handleCountryClick function passed as a prop
     handleClose();
   };
 
@@ -24,7 +33,12 @@ const VisitedCountries = ({ visitedCountries, onClearVisitedCountries }) => {
       <ul className="visited-countries-list">
         {visitedCountries.map((country, index) => (
           <li key={index} className="country-item">
-            <span>{country}</span>
+            <Button
+              onClick={() => handleCountryItemClick(country)}
+              variant="outlined"
+            >
+              {country}
+            </Button>
           </li>
         ))}
       </ul>
