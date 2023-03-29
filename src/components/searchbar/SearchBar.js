@@ -10,7 +10,6 @@ const SearchBar = ({ onSearch }) => {
 
   const handleSearchClick = () => {
     onSearch(searchText);
-
     setSearchText(""); //to clear search input after clicking the search
     
   };
@@ -22,7 +21,6 @@ const SearchBar = ({ onSearch }) => {
     } else {
       alert("Please enter a valid country name!");
     }
-
   };
 
   return (

@@ -48,6 +48,8 @@ function App() {
     setZoomLevel(newZoomLevel);
   };
 
+
+
   return (
     <div className="App">
       <Header onSearch={handleSearch} visitedCountries={visitedCountries} />
