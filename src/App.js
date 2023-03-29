@@ -7,10 +7,12 @@ import "./index.css";
 import Footer from "./components/footer/Footer";
 import Header from "./components/header/header";
 import ResponsiveLayout from "./components/responsive-layout/Responsive";
+import PlaceholderHeader from "./components/placeholder-header/Placeholder-header";
 
 function App() {
   const [searchedCountry, setSearchedCountry] = useState("");
   const [zoomLevel, setZoomLevel] = useState(5);
+  const [renderContent, setRenderContent] = useState(false); // to render content on click
 
   const [visitedCountries, setVisitedCountries] = useState(() => {
     const storedVisitedCountries = localStorage.getItem("visitedCountries");
@@ -30,6 +32,7 @@ function App() {
 
   const handleSearch = (country) => {
     setSearchedCountry(country);
+    setRenderContent(true);
 
     if (country) {
       const updatedVisitedCountries = [...visitedCountries, country];
@@ -48,11 +51,17 @@ function App() {
   return (
     <div className="App">
       <Header onSearch={handleSearch} visitedCountries={visitedCountries} />
-      <ResponsiveLayout
-        searchedCountry={searchedCountry}
-        onZoomChange={handleZoomChange}
-        zoomLevel={zoomLevel}
-      />
+
+      {renderContent ? (
+        <ResponsiveLayout
+          searchedCountry={searchedCountry}
+          onZoomChange={handleZoomChange}
+          zoomLevel={zoomLevel}
+        />
+      ) : (
+        <PlaceholderHeader />
+      )}
+
       <Footer />
     </div>
   );
