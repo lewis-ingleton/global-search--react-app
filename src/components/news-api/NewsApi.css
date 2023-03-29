@@ -23,10 +23,9 @@ li:nth-child(2n) {
   margin-right: 0;
 }
 
-img {
-  width: 100%;
-  width: 200px;
-  height: 170px;
+.newsImage {
+  max-width: 400px;
+  max-height: 280px;
   margin-right: 20px;
   overflow: hidden;
 }
@@ -40,5 +39,9 @@ p {
   font-size: 16px;
   line-height: 1.5;
   margin: auto;
+}
+
+a {
+  color: #25A18E;
 }
 
