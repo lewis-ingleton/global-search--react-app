@@ -5,14 +5,11 @@ import Grid from "@mui/material/Grid";
 
 const SearchBar = ({ onSearch }) => {
   const [searchText, setSearchText] = useState("");
-  
-
 
   const handleSearchClick = () => {
     onSearch(searchText);
 
     setSearchText(""); //to clear search input after clicking the search
-    
   };
 
   // To validate the search input is not empty
@@ -22,7 +19,6 @@ const SearchBar = ({ onSearch }) => {
     } else {
       alert("Please enter a valid country name!");
     }
-
   };
 
   return (

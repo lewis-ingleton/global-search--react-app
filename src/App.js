@@ -7,8 +7,7 @@ import "./index.css";
 import Footer from "./components/footer/Footer";
 import Header from "./components/header/header";
 import ResponsiveLayout from "./components/responsive-layout/Responsive";
-import { render } from "@testing-library/react";
-import PlaceholderHeader from "./components/placeholder-header/Placeholder-header"
+import PlaceholderHeader from "./components/placeholder-header/Placeholder-header";
 
 function App() {
   const [searchedCountry, setSearchedCountry] = useState("");
@@ -33,6 +32,7 @@ function App() {
 
   const handleSearch = (country) => {
     setSearchedCountry(country);
+    setRenderContent(true);
 
     if (country) {
       const updatedVisitedCountries = [...visitedCountries, country];
@@ -51,19 +51,17 @@ function App() {
   return (
     <div className="App">
       <Header onSearch={handleSearch} visitedCountries={visitedCountries} />
-     
-     
-      {renderContent ? 
-      <ResponsiveLayout
-        searchedCountry={searchedCountry}
-        onZoomChange={handleZoomChange}
-        zoomLevel={zoomLevel}
-      /> : <PlaceholderHeader />
-      }
 
+      {renderContent ? (
+        <ResponsiveLayout
+          searchedCountry={searchedCountry}
+          onZoomChange={handleZoomChange}
+          zoomLevel={zoomLevel}
+        />
+      ) : (
+        <PlaceholderHeader />
+      )}
 
-      
-      
       <Footer />
     </div>
   );
