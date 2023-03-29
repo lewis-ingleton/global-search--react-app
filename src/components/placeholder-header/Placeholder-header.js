@@ -1,4 +1,4 @@
-import { Place } from '@mui/icons-material'
+
 import './Placeholder-header.css'
 
 function PlaceholderHeader () {
