@@ -8,6 +8,11 @@ const SearchBar = ({ onSearch }) => {
 
   const handleSearchClick = () => {
     onSearch(searchText);
+    scrollPage();
+  };
+
+  const scrollPage = () => {
+    window.scrollTo(0, document.body.scrollHeight);
   };
 
   return (
