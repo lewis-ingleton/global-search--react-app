@@ -5,22 +5,16 @@ import Grid from "@mui/material/Grid";
 
 const SearchBar = ({ onSearch }) => {
   const [searchText, setSearchText] = useState("");
-  
-
 
   const handleSearchClick = () => {
     onSearch(searchText);
-    setSearchText(""); //to clear search input after clicking the search
-    
+
+    scrollPage();
   };
 
-  // To validate the search input is not empty
-  const checkEmptySearch = () => {
-    if (searchText !== "") {
-      onSearch(searchText);
-    } else {
-      alert("Please enter a valid country name!");
-    }
+  const scrollPage = () => {
+    window.scrollTo(0, document.body.scrollHeight);
+
   };
 
   return (
