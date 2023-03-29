@@ -34,6 +34,7 @@ const VisitedCountries = ({
         {visitedCountries.map((country, index) => (
           <li key={index} className="country-item">
             <Button
+              className="visited-button-name"
               onClick={() => handleCountryItemClick(country)}
               variant="outlined"
             >
@@ -44,19 +45,20 @@ const VisitedCountries = ({
       </ul>
 
       <Button
+      className="visited-button"
         variant="outlined"
         onClick={handleClear}
         className="clear-visited-countries-btn"
       >
-        Clear Visited Countries
+        Clear visited countries
       </Button>
     </Box>
   );
 
   return (
     <div>
-      <Button variant="contained" onClick={handleOpen}>
-        Visited Countries
+      <Button className="visited-button" variant="contained" onClick={handleOpen}>
+        Visited countries
       </Button>
       <Modal
         open={open}
