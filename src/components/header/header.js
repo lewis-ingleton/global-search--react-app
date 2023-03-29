@@ -29,11 +29,7 @@ function Header({
           <h1>Global Search</h1>
         </div>
         <div className="visited-countries-btn">
-          <VisitedCountries
-            visitedCountries={visitedCountries}
-            onClearVisitedCountries={handleClearVisitedCountries}
-            onCountryClick={onCountryClick} // Pass the handleCountryClick function to the VisitedCountries component
-          />
+          
         </div>
       </div>
       <div className="header">
@@ -49,6 +45,11 @@ function Header({
             onSearch={onSearch}
             onZoomChange={onZoomChange}
             zoomLevel={zoomLevel}
+          />
+          <VisitedCountries 
+            visitedCountries={visitedCountries}
+            onClearVisitedCountries={handleClearVisitedCountries}
+            onCountryClick={onCountryClick} // Pass the handleCountryClick function to the VisitedCountries component
           />
         </div>
       </div>

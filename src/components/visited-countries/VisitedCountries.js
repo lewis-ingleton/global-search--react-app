@@ -27,13 +27,14 @@ const VisitedCountries = ({
 
   const modalBody = (
     <Box className="visited-countries-modal">
-      <Typography variant="h6" component="h2">
-        Visited Countries
+      <Typography variant="h5" component="h2">
+        Visited countries
       </Typography>
       <ul className="visited-countries-list">
         {visitedCountries.map((country, index) => (
           <li key={index} className="country-item">
             <Button
+              className="visited-button-name"
               onClick={() => handleCountryItemClick(country)}
               variant="outlined"
             >
@@ -48,15 +49,15 @@ const VisitedCountries = ({
         onClick={handleClear}
         className="clear-visited-countries-btn"
       >
-        Clear Visited Countries
+        Clear visited countries
       </Button>
     </Box>
   );
 
   return (
     <div>
-      <Button variant="contained" onClick={handleOpen}>
-        Visited Countries
+      <Button className="visited-button" variant="contained" onClick={handleOpen}>
+        Visited countries
       </Button>
       <Modal
         open={open}
