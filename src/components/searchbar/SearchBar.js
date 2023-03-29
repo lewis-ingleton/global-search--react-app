@@ -1,9 +1,7 @@
 import React, { useState } from "react";
 import TextField from "@mui/material/TextField";
 import Button from "@mui/material/Button";
-
-// CSS 
-import './SearchBar.css'
+import Grid from "@mui/material/Grid";
 
 const SearchBar = ({ onSearch }) => {
   const [searchText, setSearchText] = useState("");
@@ -11,8 +9,8 @@ const SearchBar = ({ onSearch }) => {
 
 
   const handleSearchClick = () => {
-    checkEmptySearch();
     onSearch(searchText);
+
     setSearchText(""); //to clear search input after clicking the search
     
   };
@@ -24,23 +22,24 @@ const SearchBar = ({ onSearch }) => {
     } else {
       alert("Please enter a valid country name!");
     }
+
   };
 
   return (
-
-    <>
-    <TextField
-          className="textField"
+    <Grid container spacing={2} alignItems="center">
+      <Grid item>
+        <TextField
           label="Country"
           value={searchText}
           onChange={(e) => setSearchText(e.target.value)}
         />
-        <Button variant="contained" onClick={handleSearchClick} className="button">
+      </Grid>
+      <Grid item>
+        <Button variant="contained" onClick={handleSearchClick}>
           Search
         </Button>
-    </>
-  
-    
+      </Grid>
+    </Grid>
   );
 };
 
