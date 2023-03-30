@@ -10,8 +10,8 @@ const SearchBar = ({ onSearch }) => {
 
   const handleSearchClick = () => {
     onSearch(searchText);
-
     scrollPage();
+    setSearchText(""); //to clear search input after clicking the search button
   };
 
   const scrollPage = () => {

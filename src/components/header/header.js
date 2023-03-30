@@ -28,9 +28,7 @@ function Header({
           <LanguageIcon className="headerIcon" />
           <h1>Global Search</h1>
         </div>
-        <div className="visited-countries-btn">
-          
-        </div>
+        <div className="visited-countries-btn"></div>
       </div>
       <div className="header">
         <div className="headerWrapper">
@@ -46,7 +44,7 @@ function Header({
             onZoomChange={onZoomChange}
             zoomLevel={zoomLevel}
           />
-          <VisitedCountries 
+          <VisitedCountries
             visitedCountries={visitedCountries}
             onClearVisitedCountries={handleClearVisitedCountries}
             onCountryClick={onCountryClick} // Pass the handleCountryClick function to the VisitedCountries component

@@ -34,10 +34,20 @@ const NewsApi = ({ country }) => {
           news.map((article) => (
             <Grid item xs={12} sm={6} md={4} key={article.url}>
               <div>
-                <img className = 'newsImage'src={article.image} alt={article.title} />
+                <img
+                  className="newsImage"
+                  src={article.image}
+                  alt={article.title}
+                />
                 <div className="textAlign">
                   <h3>
-                    <a href={article.url} target="_blank" rel="noopener noreferrer">{article.title}</a>
+                    <a
+                      href={article.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      {article.title}
+                    </a>
                   </h3>
                   <p className="newsDescription">{article.description}</p>
                 </div>
