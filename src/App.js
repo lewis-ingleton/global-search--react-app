@@ -47,7 +47,7 @@ function App() {
   const handleCountryClick = (countryName) => {
     setSearchedCountry(countryName);
     setRenderContent(true);
-  }
+  };
 
   const handleZoomChange = (newZoomLevel) => {
     setZoomLevel(newZoomLevel);

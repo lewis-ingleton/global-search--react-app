@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 
-// CSS 
-import './Map.css'
+// CSS
+import "./Map.css";
 
 const apiKey = "17e097a809504fdd90da35662edf4c00";
 

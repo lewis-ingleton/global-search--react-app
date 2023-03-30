@@ -42,10 +42,9 @@ export default function ResponsiveLayout({
               </Item>
             </Box>
             <Box gridColumn="span 12">
-             <Item className="countryInfo">
-              <CountryInfo country={searchedCountry}/>
-              
-               </Item>
+              <Item className="countryInfo">
+                <CountryInfo country={searchedCountry} />
+              </Item>
             </Box>
             <Box gridColumn="span 12">
               <Item className="map-container">
@@ -54,7 +53,9 @@ export default function ResponsiveLayout({
               </Item>
             </Box>
             <Box gridColumn="span 12">
-              <Item><NewsApi country={searchedCountry} /></Item>
+              <Item>
+                <NewsApi country={searchedCountry} />
+              </Item>
             </Box>
           </Box>
         </Box>
@@ -68,20 +69,21 @@ export default function ResponsiveLayout({
             </Box>
             <Box gridColumn="span 6">
               <Item className="countryInfo">
-                <CountryInfo country={searchedCountry}/>
-                
-                 </Item>
+                <CountryInfo country={searchedCountry} />
+              </Item>
             </Box>
-            <Box gridColumn="span 6" >
+            <Box gridColumn="span 6">
               <Item className="map-container">
                 <Map country={searchedCountry} zoomLevel={zoomLevel} />
                 <ZoomSlider onZoomChange={onZoomChange} />
               </Item>
             </Box>
             <Box gridColumn="span 12">
-              <Item className="item"> <NewsApi country={searchedCountry} /></Item>
               <Item className="item">
+                {" "}
+                <NewsApi country={searchedCountry} />
               </Item>
+              <Item className="item"></Item>
             </Box>
           </Box>
         </Box>
