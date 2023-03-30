@@ -28,25 +28,20 @@ function Header({
           <LanguageIcon className="headerIcon" />
           <h1>Global Search</h1>
         </div>
-        <div className="visited-countries-btn">
-          
-        </div>
+        <div className="visited-countries-btn"></div>
       </div>
       <div className="header">
         <div className="headerWrapper">
           <h2>Search the Globe</h2>
           <p>
-            **User story** Global Search is the educational tool that gives you
-            breaking news from all countries across the globe, as well as latest
-            key data for all countries.
+            Use Global Search to find out all you need to know about a country. Get key data about a countries population, language and more. Also get the latest news stories so you can stay up to date with what's going on in the world. Start searching now! 
           </p>
-          <p>Use the search bar to search for a country.</p>
           <SearchBar
             onSearch={onSearch}
             onZoomChange={onZoomChange}
             zoomLevel={zoomLevel}
           />
-          <VisitedCountries 
+          <VisitedCountries
             visitedCountries={visitedCountries}
             onClearVisitedCountries={handleClearVisitedCountries}
             onCountryClick={onCountryClick} // Pass the handleCountryClick function to the VisitedCountries component

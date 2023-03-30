@@ -14,12 +14,27 @@
     text-transform: capitalize;
 }
 
+
 .map-container, .countryInfo {
+.countryInfoWrapper {
     display: flex;
     flex-direction: column;
-    overflow: hidden;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.countryInfo {
+ width: 70%;
+}
+
+.news-wrapper {
+    display: flex;
+    flex-direction: row;
+    gap: 2;
+    justify-content: center;
+    flex-wrap: wrap;
+    
 }
 
 h2,

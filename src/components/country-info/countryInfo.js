@@ -45,7 +45,7 @@ function CountryInfo({ country }) {
       <img src={flag} alt={`Flag of ${country}`} />
 
       {/* Render the summary */}
-      <p>{summary}</p>
+      <h3>{summary}</h3>
 
       {/* Render the population */}
       <p>Population: {population}</p>

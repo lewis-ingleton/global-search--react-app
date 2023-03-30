@@ -13,7 +13,6 @@ import ZoomSlider from "../zoom-slider/ZoomSlider";
 import NewsApi from "../news-api/NewsApi";
 import CountryName from "../country-name/CountryName";
 import CountryInfo from "../country-info/countryInfo";
-//import FetchSummary from "../country-summary/summary";
 
 const Item = styled(Paper)(({ theme }) => ({
   backgroundColor: theme.palette.mode === "dark" ? "#1A2027" : "#fff",

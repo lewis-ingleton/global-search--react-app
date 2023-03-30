@@ -25,10 +25,10 @@ li:nth-child(2n) {
 }
 
 .newsImage {
-  max-width: 400px;
-  max-height: 280px;
+  flex-shrink: 1;
+  max-width: 250px;
+  max-height: 180px;
   margin-right: 20px;
-  overflow: hidden;
 }
 
 h3 {
