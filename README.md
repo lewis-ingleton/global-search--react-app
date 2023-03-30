@@ -6,21 +6,18 @@
 
 The app allows the user to search for a Country and get back information about it. This shows on the page in an intuituve UI.
 
-[_Output Screenshot_]()
+![Global Search](public/global-search-landing-page.png)
 
-![alt text](images/global-search-react-app-flag&map-img-01)
-![alt text](images/global-search-react-app-flag&map-img-02)
+- [**Video demo**](https://www.loom.com/share/0d11dcbec2dd41bb977a302881472c17)
 
-[**Video demo**](https://www.loom.com/share/0d11dcbec2dd41bb977a302881472c17)
-
-Screenshot goes here
+- [**Powerpoint presentation**](https://docs.google.com/presentation/d/1ALX04w12RcGpHx8aAAkzz1pECGw_aNdMiMd3KrqyiPo/edit#slide=id.p)
 
 ## Table of Contents:
 
-**[Installation](#Installation)**</br>
-**[Usage](#Usage)**</br>
-**[License](#License)**</br>
-**[Questions](#Questions)**</br>
+- **[Installation](#Installation)**</br>
+- **[Usage](#Usage)**</br>
+- **[License](#License)**</br>
+- **[Questions](#Questions)**</br>
 
 ## Installation:
 
