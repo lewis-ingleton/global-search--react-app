@@ -10,8 +10,6 @@ The app allows the user to search for a Country and get back information about i
 
 [**Video demo**](https://www.loom.com/share/0d11dcbec2dd41bb977a302881472c17)
 
-Screenshot goes here
-
 ## Table of Contents:
 
 **[Installation](#Installation)**</br>
