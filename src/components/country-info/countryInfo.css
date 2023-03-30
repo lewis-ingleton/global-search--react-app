@@ -1,0 +1,7 @@
+.summary {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 5; /* Number of lines to show */
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
