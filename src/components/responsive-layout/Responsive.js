@@ -13,7 +13,7 @@ import ZoomSlider from "../zoom-slider/ZoomSlider";
 import NewsApi from "../news-api/NewsApi";
 import CountryName from "../country-name/CountryName";
 import CountryInfo from "../country-info/countryInfo";
-import FetchSummary from "../country-summary/summary";
+//import FetchSummary from "../country-summary/summary";
 
 const Item = styled(Paper)(({ theme }) => ({
   backgroundColor: theme.palette.mode === "dark" ? "#1A2027" : "#fff",
@@ -44,7 +44,7 @@ export default function ResponsiveLayout({
             <Box gridColumn="span 12">
              <Item className="countryInfo">
               <CountryInfo country={searchedCountry}/>
-              <FetchSummary country={searchedCountry}/>
+              
                </Item>
             </Box>
             <Box gridColumn="span 12">
@@ -69,7 +69,7 @@ export default function ResponsiveLayout({
             <Box gridColumn="span 6">
               <Item className="countryInfo">
                 <CountryInfo country={searchedCountry}/>
-                <FetchSummary country={searchedCountry}/>
+                
                  </Item>
             </Box>
             <Box gridColumn="span 6" >

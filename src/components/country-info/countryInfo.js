@@ -1,42 +1,63 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from "react";
 
 function CountryInfo({ country }) {
-  const [data, setData] = useState(null);
+  // State variables to store the country information
+  const [flag, setFlag] = useState("");
+  const [summary, setSummary] = useState("");
+  const [population, setPopulation] = useState("");
+  const [languages, setLanguages] = useState([]);
+  const [capital, setCapital] = useState("");
+  const [region, setRegion] = useState("");
 
-  // Use the `useEffect` hook to fetch the data from the REST Countries API and update the `data` state when the `country` prop changes.
+  // Effect hook to fetch data from the first API
   useEffect(() => {
-    async function fetchData() {
-      // Construct the API endpoint URL by interpolating the `country` prop into the URL string and adding the  parameters.
-      const url = `https://restcountries.com/v2/name/${country}?fullText=true&fields=name,capital,region,population,currencies,languages,flag`;
-      // Make a GET request
-      const response = await fetch(url);
-      // Parse the response data 
-      const jsonData = await response.json();
-      // Set the `data` state to the first element of the JSON data array.
-      setData(jsonData[0]);
-    }
-    fetchData();
-  }, [country]); 
+    const url = `https://restcountries.com/v2/name/${country}`;
 
-  // Render the `data` state if it is not `null`.
+    fetch(url)
+      .then((response) => response.json())
+      .then((data) => {
+        // Set the state variables based on the API response
+        setFlag(data[0].flag);
+        setPopulation(data[0].population);
+        setLanguages(data[0].languages);
+        setCapital(data[0].capital);
+        setRegion(data[0].region);
+      })
+      .catch((error) => console.error(error));
+  }, [country]);
+
+  // Effect hook to fetch data from the second API
+  useEffect(() => {
+    const apiUrl = `http://api.geonames.org/wikipediaSearchJSON?q=${country}&maxRows=1&username=skhan`;
+
+    fetch(apiUrl)
+      .then((response) => response.json())
+      .then((data) => {
+        // Set the state variable for summary based on the API response
+        setSummary(data.geonames[0].summary);
+      })
+      .catch((error) => console.error(error));
+  }, [country]);
+
   return (
     <div>
-      {data && (
-        <div>
-          {/* Display flag */}
-          <img src={data.flag} alt={data.name} style={{ width: '200px' }} />
-          {/* Display population */}
-          <p>Population: {data.population.toLocaleString()}</p>
-          {/* Display currency name and code using the `currencies` property. */}
-          <p>Currency: {data.currencies[0].name} ({data.currencies[0].code})</p>
-          {/* Display languages */}
-          <p>Languages: {data.languages.map((lang) => lang.name).join(', ')}</p>
-          {/* Displaycapital city */}
-          <p>Capital city: {data.capital}</p>
-          {/* Display the country region */}
-          <p>Region: {data.region}</p>
-        </div>
-      )}
+      {/* Render the country flag */}
+      <img src={flag} alt={`Flag of ${country}`} />
+
+      {/* Render the summary */}
+      <p>{summary}</p>
+
+      {/* Render the population */}
+      <p>Population: {population}</p>
+
+      {/* Render the languages */}
+      <p>Languages: {languages.map((lang) => lang.name).join(", ")}</p>
+
+      {/* Render the capital city */}
+      <p>Capital: {capital}</p>
+
+      {/* Render the region */}
+      <p>Region: {region}</p>
     </div>
   );
 }
