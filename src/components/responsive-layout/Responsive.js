@@ -42,9 +42,9 @@ export default function ResponsiveLayout({
               </Item>
             </Box>
             <Box gridColumn="span 12">
-              <Item className="countryInfo">
-                <CountryInfo country={searchedCountry} />
-              </Item>
+             <Item className="countryInfoWrapper">
+              <CountryInfo className="countryInfo" country={searchedCountry}/>
+               </Item>
             </Box>
             <Box gridColumn="span 12">
               <Item className="map-container">
@@ -52,10 +52,8 @@ export default function ResponsiveLayout({
                 <ZoomSlider onZoomChange={onZoomChange} />
               </Item>
             </Box>
-            <Box gridColumn="span 12">
-              <Item>
-                <NewsApi country={searchedCountry} />
-              </Item>
+            <Box gridColumn="span 12" >
+              <Item className="news-wrapper"><NewsApi country={searchedCountry} /></Item>
             </Box>
           </Box>
         </Box>
@@ -68,9 +66,10 @@ export default function ResponsiveLayout({
               </Item>
             </Box>
             <Box gridColumn="span 6">
-              <Item className="countryInfo">
-                <CountryInfo country={searchedCountry} />
-              </Item>
+              <Item className="countryInfoWrapper">
+                <CountryInfo className="countryInfo" country={searchedCountry}/>
+                
+                 </Item>
             </Box>
             <Box gridColumn="span 6">
               <Item className="map-container">
@@ -79,11 +78,7 @@ export default function ResponsiveLayout({
               </Item>
             </Box>
             <Box gridColumn="span 12">
-              <Item className="item">
-                {" "}
-                <NewsApi country={searchedCountry} />
-              </Item>
-              <Item className="item"></Item>
+              <Item className="news-wrapper"> <NewsApi country={searchedCountry} /></Item>
             </Box>
           </Box>
         </Box>
