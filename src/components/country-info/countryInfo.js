@@ -40,7 +40,7 @@ function CountryInfo({ country }) {
   }, [country]);
 
   return (
-    <div>
+    <div className="flag-section">
       {/* Render the country flag */}
       <img src={flag} alt={`Flag of ${country}`} />
 
