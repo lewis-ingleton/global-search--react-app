@@ -12,6 +12,8 @@ import Map from "../map/Map";
 import ZoomSlider from "../zoom-slider/ZoomSlider";
 import NewsApi from "../news-api/NewsApi";
 import CountryName from "../country-name/CountryName";
+import CountryInfo from "../country-info/countryInfo";
+//import FetchSummary from "../country-summary/summary";
 
 const Item = styled(Paper)(({ theme }) => ({
   backgroundColor: theme.palette.mode === "dark" ? "#1A2027" : "#fff",
@@ -40,7 +42,10 @@ export default function ResponsiveLayout({
               </Item>
             </Box>
             <Box gridColumn="span 12">
-              <Item>Country flag</Item>
+             <Item className="countryInfo">
+              <CountryInfo country={searchedCountry}/>
+              
+               </Item>
             </Box>
             <Box gridColumn="span 12">
               <Item className="map-container">
@@ -62,7 +67,10 @@ export default function ResponsiveLayout({
               </Item>
             </Box>
             <Box gridColumn="span 6">
-              <Item>Country flag</Item>
+              <Item className="countryInfo">
+                <CountryInfo country={searchedCountry}/>
+                
+                 </Item>
             </Box>
             <Box gridColumn="span 6" >
               <Item className="map-container">
