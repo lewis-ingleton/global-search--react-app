@@ -6,6 +6,11 @@
 
 The app allows the user to search for a Country and get back information about it. This shows on the page in an intuituve UI.
 
+[_Output Screenshot_]()
+
+![alt text](images/global-search-react-app-flag&map-img-01)
+![alt text](images/global-search-react-app-flag&map-img-02)
+
 [**Video Demo**]()
 
 Screenshot goes here
